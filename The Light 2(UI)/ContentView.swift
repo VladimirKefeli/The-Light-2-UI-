@@ -1,0 +1,29 @@
+              //
+//  ContentView.swift
+//  The Light 2(UI)
+//
+//  Created by Владимир Кефели on 09.11.2020.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    @State var isLightOn = true
+    
+    var body: some View {
+        ZStack {
+            isLightOn ? Color.white : Color.black
+        }
+        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        .onTapGesture {
+            isLightOn.toggle()
+        }
+        }
+    }
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
